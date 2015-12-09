@@ -88,8 +88,6 @@ FROM table
 WHERE LEFT(geohash,6)
 	IN ('dqcjqc', 'dqcjqf','dqcjqb','dqcjr1','dqcjq9','dqcjqd','dqcjr4','dqcjr0','dqcjq8');
 
-
-
 SELECT id, loc, lat, lng, url, extrakey
 FROM LocValMap
 WHERE LEFT(loc, ?)
@@ -104,7 +102,6 @@ func scaleAdjacents(encLoc string, matchSize int) []string {
 	for i := range locAdjacents {
 		retAdjacents[i] = locAdjacents[i][:matchSize]
 	}
-
 	// now dedupe?
 	return retAdjacents
 }
@@ -113,6 +110,10 @@ const selectKVQuery = "SELECT id, loc, lat, lng, url, extrakey FROM LocValMap WH
 const selectKVRangeQuery = "SELECT id, loc, lat, lng, url, extrakey FROM LocValMap WHERE substr(loc, 0, ?) IN (?,?,?,?,?,?,?,?,?)"
 
 func GetKV(lat float64, long float64) ([]LKey, error) {
+	return GetKVWithScale(lat, long, 6)
+}
+
+func GetKVWithScale(lat float64, long float64, matchSize int) ([]LKey, error) {
 	db, err := sql.Open("sqlite3", "./geoloc.db")
 	if err != nil {
 		logr.LogLine(logr.Lerror, ltagsrc, fmt.Sprintf("Error getting db connection %s", err))
@@ -120,7 +121,6 @@ func GetKV(lat float64, long float64) ([]LKey, error) {
 	}
 	defer db.Close()
 
-	matchSize := 6
 	// encode lat,long
 	encLoc := geohash.Encode(lat, long)
 	// get adjacents
