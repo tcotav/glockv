@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 	_ "github.com/mattn/go-sqlite3"
-	"github.com/tcotav/base/config"
-	"github.com/tcotav/base/logr"
 	"github.com/tcotav/glockv/model"
+	"github.com/tcotav/gobase/config"
+	"github.com/tcotav/gobase/logr"
 	"net/http"
 	"os"
 )
