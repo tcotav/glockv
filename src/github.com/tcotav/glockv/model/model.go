@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/TomiHiltunen/geohash-golang"
 	_ "github.com/mattn/go-sqlite3"
-	"github.com/tcotav/base/logr"
+	"github.com/tcotav/gobase/logr"
 )
 
 const ltagsrc = "glmod"

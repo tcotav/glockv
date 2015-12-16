@@ -10,7 +10,8 @@ sqlite3 geoloc.db < sql/create.sql
 
 
 # we do this so we have a self-contained package
-# export GOPATH=`pwd` 
+export GOPATH=`pwd` 
 go get github.com/Sirupsen/logrus
 go get github.com/mattn/go-sqlite3
 go get github.com/TomiHiltunen/geohash-golang
+go get github.com/tcotav/gobase
