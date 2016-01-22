@@ -30,7 +30,8 @@ func CreateKV(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	config, err := config.ParseConfig("glockv.cfg")
+	logr.SetConfig("etc/log.cfg")
+	config, err := config.ParseConfig("etc/glockv.cfg")
 	logr.LogLine(logr.Linfo, ltagsrc, fmt.Sprintf("%+v", config))
 	if err != nil {
 		fmt.Print(err)

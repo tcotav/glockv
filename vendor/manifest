@@ -22,7 +22,7 @@
 		{
 			"importpath": "github.com/tcotav/gobase",
 			"repository": "https://github.com/tcotav/gobase",
-			"revision": "576237f8fa24877aaa039d2265631a96713ae7f8",
+			"revision": "02fe8d6d6bb6d7ded35ba6a4263617688f4ae1ab",
 			"branch": "master"
 		},
 		{
