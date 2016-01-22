@@ -28,3 +28,7 @@ _testmain.go
 *~
 # sqlite databases
 *.db
+
+# work dirs
+bin/*
+deploy/*
