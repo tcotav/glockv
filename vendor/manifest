@@ -1,0 +1,41 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/Sirupsen/logrus",
+			"repository": "https://github.com/Sirupsen/logrus",
+			"revision": "f7f79f729e0fbe2fcc061db48a9ba0263f588252",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/TomiHiltunen/geohash-golang",
+			"repository": "https://github.com/TomiHiltunen/geohash-golang",
+			"revision": "b3e4e625abfb033eb0ae83c0566afcea2f138206",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/mattn/go-sqlite3",
+			"repository": "https://github.com/mattn/go-sqlite3",
+			"revision": "5510da399572b4962c020184bb291120c0a412e2",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/tcotav/gobase",
+			"repository": "https://github.com/tcotav/gobase",
+			"revision": "576237f8fa24877aaa039d2265631a96713ae7f8",
+			"branch": "master"
+		},
+		{
+			"importpath": "gopkg.in/airbrake/gobrake.v2",
+			"repository": "https://gopkg.in/airbrake/gobrake.v2",
+			"revision": "c9d51adc624b5cc4c1bf8de730a09af4878ffe2d",
+			"branch": "master"
+		},
+		{
+			"importpath": "gopkg.in/gemnasium/logrus-airbrake-hook.v2",
+			"repository": "https://gopkg.in/gemnasium/logrus-airbrake-hook.v2",
+			"revision": "31e6fd4bd5a98d8ee7673d24bc54ec73c31810dd",
+			"branch": "master"
+		}
+	]
+}
