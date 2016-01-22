@@ -45,6 +45,9 @@ then
   exit 1
 fi
 
+# copy over the config files
+cp $basedir/etc/*.cfg $basedir/deploy/$tgtdir
+
 # then get the scripts we want into the dir
 cd $work_dir
 cp *.sh  $basedir/deploy/$tgtdir
